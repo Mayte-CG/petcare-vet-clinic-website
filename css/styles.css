@@ -17,10 +17,9 @@ body {
 
 /* Header styles */
 header {
-    background: #2a3a4b;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
+    position: relative;
+    background: transparent;
+    padding: 0;
 }
 
 header h1 {
@@ -35,8 +34,18 @@ header p {
 
 /* Navigation styles */
 nav {
-    background: #1a2533;
-    padding: 0.5rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    
+    background-color: rgba(83, 128, 193, 0.5);
+    padding: 0.75rem 0;
 }
 
 nav ul {
@@ -54,7 +63,25 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffb300;
+    color: #edc315;
+}
+
+.logo {
+    width: 110px;
+}
+
+/* Hero section styles */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 1rem 3rem;
+
+    background: url('../assets/images/hero-img.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
 }
 
 /* Main content styles */
@@ -103,7 +130,7 @@ section {
 }
 
 .contact-link {
-    color: #ffb300;
+    color: #edc315;
     font-weight: 600;
     text-decoration: none;
 }
