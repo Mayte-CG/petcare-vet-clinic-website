@@ -11,13 +11,14 @@
 body {
     font-family: 'Nunito Sans', Arial, sans-serif;
     background-color: black;
-    color: #222;
+    color: #fff;
     line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', Arial, sans-serif;
     margin-bottom: 0.5rem;
+    color: #fff; 
 }
 
 /* Header styles */
@@ -147,8 +148,35 @@ section {
     margin-bottom: 2.5rem;
     background: #fff;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(42, 58, 75, 0.07);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 3.70rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.8rem;
+    color: #cfd8dc;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #cfd8dc;
+}
+
+.services{
+    background-color: #739ee3;
+    color: #fff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
 /* Footer styles */
