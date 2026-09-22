@@ -7,25 +7,25 @@
     box-sizing: border-box;
 }
 
+
+
 /* Body styles */
 body {
-    font-family: 'Nunito Sans', Arial, sans-serif;
     background-color: black;
+}
+
+/* Typography */
+body {
+    font-family: 'Nunito Sans', Arial, sans-serif;
     color: #fff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', Arial, sans-serif;
     margin-bottom: 0.5rem;
     color: #fff; 
-}
-
-/* Header styles */
-header {
-    position: relative;
-    background: transparent;
-    padding: 0;
 }
 
 header h1 {
@@ -35,7 +35,96 @@ header h1 {
 
 header p {
     font-size: 1.8rem;
-    color: #cfd8dc;
+    color: #fff;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #edc315;
+}
+
+.hero {
+    color: #fff;
+    text-align: center;
+}
+
+.cta-button {
+    color: #222;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+section h2 {
+    color: #fff;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+section h3 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: #fff;
+    text-align: center;
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.services {
+    color: #fff;
+}
+
+.site-footer {
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+.footer-column {
+    text-align: left;
+}
+
+.footer-column h3 {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column p {
+    margin-bottom: 1rem;
+}
+
+.contact-link {
+    color: #edc315;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Header styles */
+header {
+    position: relative;
+    background: transparent;
+    padding: 0;
 }
 
 /* Navigation styles */
@@ -62,14 +151,7 @@ nav ul {
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
     transition: color 0.2s;
-}
-
-nav a:hover {
-    color: #edc315;
 }
 
 .logo {
@@ -84,15 +166,13 @@ nav a:hover {
 
 .hero {
     position: relative;
-    min-height: 75vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem 1rem 3rem;
     background: url('../assets/images/hero-img.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
 }
 
 .hero::before {
@@ -115,12 +195,8 @@ nav a:hover {
     justify-content: center;
     border-radius: 32.5px; 
     background-color: #edc315;
-    color: #222;
     padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    font-weight: 800;
     cursor: pointer; 
-    font-size: 1.5rem; 
     margin: 2rem;    
     transition:
         background-color 0.2s,
@@ -138,53 +214,97 @@ nav a:hover {
 }
 /* Main content styles */
 main {
-    max-width: 1100px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    width: 100%;
 }
 
 /* Section styles */
 section {
-    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
     background: #fff;
-    padding: 2rem;
 }
 
-section h2 {
-    margin-bottom: 1rem;
-    color: #fff;
-    font-size: 3.70rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
+.section-content {
+    position: relative;
+    z-index: 1;
+    width: min(100% - 2rem, 1200px);
+    margin: 0 auto;
+    padding: 5rem 0;
 }
 
-section p {
-    font-size: 1.8rem;
-    color: #cfd8dc;
-}
-
-.service-card p {
-    font-size: 1rem;
-    color: #cfd8dc;
-}
-
-.services{
+.services {
     background-color: #739ee3;
-    color: #fff;
+    background-image:
+        url('../assets/images/shape-1.png'),
+        url('../assets/images/shape-2.png');
+    background-repeat: no-repeat;
+    background-position: left top, right top;
+    background-size: 18rem auto, 14rem auto;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #edc315;
+    mix-blend-mode: multiply;
+    z-index: 0; 
+}
+
+.about {
+    background-color: #edc315;
+    background: url('../assets/images/stats-img.jpg') no-repeat center center/cover;
+}
+
+.pricing {
+    background-color: #3384c6;
+}
+
+.features {
+    background-color: #739ee3;
+}
+
+.testimonials {
+    background-color: #edc315;
 }
 
 .services-grid {
     display: grid;
+    margin-top: 2.5rem; 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    justify-items: center;    
+    gap: 5rem;
+}
+
+.service-image {
+    width: 214px;
+    height: 214px;
+    border-radius: 50%;
+    margin-bottom: 0.70rem;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;    
+}
+
+.stats-grid {
+    display: grid;
+    margin-top: 2.5rem; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;    
+    gap: 5rem;
 }
 
 /* Footer styles */
 .site-footer {
     background: #2a3a4b;
-    color: #fff;
     padding: 2rem 1rem;
-    font-size: 0.95rem;
     margin-top: 2rem;
 }
 
@@ -196,39 +316,19 @@ section p {
     gap: 3rem;
 }
 
-.footer-column {
-    text-align: left;
-}
-
-.footer-column h3 {
-    margin-bottom: 0.5rem;
-}
-
-.footer-column p {
-    margin-bottom: 1rem;
-}
-
-.contact-link {
-    color: #edc315;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
-}
-
 /* Responsive design */
 @media (max-width: 700px) {
     nav ul {
         flex-direction: column;
         gap: 1rem;
     }
-    main {
-        padding: 0 0.5rem;
+    .section-content {
+        width: min(100% - 1rem, 1200px);
+        padding: 2rem 0;
     }
-    section {
-        padding: 1rem;
+    .services {
+        background-position: -5rem -2rem, right 1rem top 1rem;
+        background-size: 13rem auto, 9rem auto;
     }
     .footer-content {
         grid-template-columns: 1fr;
