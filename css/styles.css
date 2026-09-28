@@ -363,6 +363,34 @@ section {
     background-color: #739ee3;
 }
 
+.features-grid {
+    display: grid;
+    margin-top: 2.5rem; 
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 4rem;
+}
+
+.feature-card{
+    display: grid;
+    width: 100%;
+    margin-top: 25px;
+    grid-template-columns: 5rem minmax(0, 25rem);
+    column-gap: 2rem;
+    align-items: start;
+}
+
+.feature-card img {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 5.5rem;
+    height: auto;
+}
+
+.feature-card h3,
+.feature-card p {
+    grid-column: 2;
+    text-align: left;
+}
 .testimonials {
     background-color: #edc315;
 }
@@ -391,6 +419,10 @@ section {
     .section-content {
         width: min(100% - 1rem, 1200px);
         padding: 2rem 0;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
     }
     .services {
         background-position: -5rem -2rem, right 1rem top 1rem;
