@@ -137,6 +137,16 @@ section p {
     line-height: 1.25;
 }
 
+.pricing-card p {
+    color: #3384c6; 
+}
+
+.pricing-card h3 {
+    color: #3384c6; 
+}
+
+
+
 /* Header styles */
 header {
     position: relative;
@@ -205,6 +215,7 @@ nav a {
 }
 
 .cta-button {
+    border: 0;
     display: inline-flex;
     width: 325px;
     height: 65px; 
@@ -319,6 +330,33 @@ section {
 
 .pricing {
     background-color: #3384c6;
+}
+
+.pricing-grid {
+    display: grid;
+    margin-top: 2.5rem; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;    
+    gap: 5rem;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #fff;
+    width: 372px;
+    height: 500px;
+    padding: 35px 25px 35px 25px;
+    border-radius: 8px;
+
+}
+
+.pricing-card img {
+    margin: 25px 25px;
+
 }
 
 .features {
