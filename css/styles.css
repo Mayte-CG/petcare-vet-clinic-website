@@ -145,7 +145,20 @@ section p {
     color: #3384c6; 
 }
 
+.testimonials p {
+    font-family: 'Poppins', Arial, sans-serif;    
+    color: #fff; 
+}
 
+.testimonials p {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.testimonials cite {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
 
 /* Header styles */
 header {
