@@ -49,6 +49,10 @@ nav a:hover {
   color: #edc315;
 }
 
+nav a.active {
+  color: #edc315;
+}
+
 .hero {
   color: #fff;
   text-align: center;
@@ -59,6 +63,7 @@ nav a:hover {
   text-decoration: none;
   font-weight: 800;
   font-size: 1.5rem;
+  font-family: inherit;
 }
 
 section h2 {
@@ -270,6 +275,81 @@ section {
   position: relative;
   overflow: hidden;
   background: #fff;
+}
+
+.contact-page-header {
+  min-height: 6rem;
+  background-color: #739ee3;
+}
+
+.contact-section {
+  min-height: calc(100vh - 6rem);
+  padding: 3rem 1rem;
+  background-color: #739ee3;
+  background-image:
+    url("../assets/images/shape-1.png"), url("../assets/images/shape-2.png");
+  background-repeat: no-repeat;
+  background-position:
+    left top,
+    right top;
+  background-size:
+    18rem auto,
+    14rem auto;
+}
+
+.contact-content {
+  width: min(100%, 44rem);
+  margin: 0 auto;
+}
+
+.contact-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+.contact-header p {
+  font-size: 1.25rem;
+}
+
+.contact-form {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  color: #222;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-field label {
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #b7c3d0;
+  border-radius: 0.35rem;
+  color: #222;
+  font: inherit;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.contact-form .cta-button {
+  width: min(100%, 20rem);
+  margin: 0.5rem 0 0;
 }
 
 .section-content {
@@ -696,5 +776,18 @@ section {
 
   .feature-card img {
     width: 4.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .contact-form {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .services,
+  .contact-section {
+    background-image: none;
   }
 }
