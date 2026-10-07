@@ -531,6 +531,81 @@ section {
   margin-right: 0.5rem;
 }
 
+/* Number animations */
+
+/* Define a custom CSS property '--num' that can be animated as an integer */
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+/* Base style for number animation elements */
+/* Initializes --num to 0 and resets the CSS counter 'num' to that value */
+.number-animation {
+  --num: 0;
+  counter-reset: num var(--num);
+}
+
+/* Use the ::after pseudo-element to display the current value of the counter */
+.number-animation::after {
+  content: counter(num);
+}
+
+/* Keyframe animations to animate --num from 0 up to the target number */
+/* Example animation from 0 to 3500 */
+@keyframes counter--3500 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 3500;
+  }
+}
+
+@keyframes counter--900 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 900;
+  }
+}
+
+@keyframes counter--2000 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 2000;
+  } 
+  }
+
+@keyframes counter--3500 {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 3500;
+  }
+}
+
+/* You can add more animations for different target numbers as needed */
+
+/* Animation classes that apply the corresponding keyframe animations */
+.animate--3500 {
+  animation: counter--3500 2s cubic-bezier(0.25, 1, 0.9, 1) forwards;
+}
+
+.animate--900 {
+  animation: counter--900 2s cubic-bezier(0.25, 1, 0.9, 1) forwards;
+}
+
+.animate--2000 {
+  animation: counter--2000 2s cubic-bezier(0.25, 1, 0.9, 1) forwards;
+}
+
+
 /* Responsive design */
 
 @media (max-width: 1280px) {

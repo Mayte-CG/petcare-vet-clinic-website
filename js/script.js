@@ -35,3 +35,23 @@ if (navToggle && primaryNavigation) {
 		setMenuOpen(false);
 	});
 }
+
+// Number animation
+const numberElements = document.querySelectorAll(".number-animation[data-final]");
+
+if ("IntersectionObserver" in window) {
+	const numberObserver = new IntersectionObserver(
+		(entries, observer) => {
+			entries.forEach((entry) => {
+				if (!entry.isIntersecting) return;
+
+				const element = entry.target;
+				element.classList.add(`animate--${element.dataset.final}`);
+				observer.unobserve(element);
+			});
+		},
+		{ threshold: 0.5 },
+	);
+
+	numberElements.forEach((element) => numberObserver.observe(element));
+}
